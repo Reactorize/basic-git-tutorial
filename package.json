@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Reactorize/basic-git-tutorial.git"
+    "url": "git+https://github.com/Reactorize/nodejs-basics-01.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Reactorize/basic-git-tutorial/issues"
+    "url": "https://github.com/Reactorize/nodejs-basics-01/issues"
   },
-  "homepage": "https://github.com/Reactorize/basic-git-tutorial#readme"
+  "homepage": "https://github.com/Reactorize/nodejs-basics-01#readme"
 }
