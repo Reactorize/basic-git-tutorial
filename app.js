@@ -1,4 +1,3 @@
-// TEST
 // GET EXPRESS AND CREATE APP
 const express = require('express');
 const app = express();
@@ -10,6 +9,9 @@ app.get('/', (req, res) => {
     result = `<h1>The Heading</h1>`;
     res.send(result)
 })
+app.get('*'), (req,res) => {
+    res.send('<h1>Page Not Found</h1><p>That page could not be found.</p>');
+}
 // CONNECT TO DATABASE AND START SERVER
 const port = 3500;
 const start = async () => {
