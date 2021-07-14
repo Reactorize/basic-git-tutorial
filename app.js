@@ -7,11 +7,13 @@ require('dotenv').config();
 app.get('/', (req, res) => {
     let result = "";
     result = `<h1>The Heading</h1>`;
-    res.send(result)
+    res.status(200).send(result)
 })
-app.get('*'), (req,res) => {
-    res.send('<h1>Page Not Found</h1><p>That page could not be found.</p>');
-}
+// 404 PAGE
+app.all('*', (req, res) => {
+  res.status(404).send('<h1>resource not found</h1>')
+})
+
 // CONNECT TO DATABASE AND START SERVER
 const port = 3500;
 const start = async () => {
