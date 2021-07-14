@@ -5,13 +5,15 @@ const connectDB = require('./database/connect');
 require('dotenv').config();
 // CREATE A GET REQUEST
 app.get('/', (req, res) => {
-    let result = "";
-    result = `<h1>The Heading</h1>`;
-    res.status(200).send(result)
+    res.status(200).send(`<h1>The Home Page</h1><p>To find out more about express framework, <a href="https://expressjs.com" target="express">view the documentation</a></p>.`)
+})
+// ANOTHER GET REQUEST
+app.get('/about', (req, res) => {
+    res.status(200).send(`<h1>The About Page</h1><p>This is the about page.</p>`)
 })
 // 404 PAGE
 app.all('*', (req, res) => {
-  res.status(404).send('<h1>resource not found</h1>')
+  res.status(404).send('<h1>Page Not Found</h1>')
 })
 
 // CONNECT TO DATABASE AND START SERVER
