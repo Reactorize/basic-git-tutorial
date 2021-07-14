@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const connectDB = require('./database/connect');
 require('dotenv').config();
+
 // CREATE A GET REQUEST
 app.get('/', (req, res) => {
     res.status(200).send(`<h1>The Home Page</h1><p>To find out more about express framework, <a href="https://expressjs.com" target="express">view the documentation</a></p>.`)
